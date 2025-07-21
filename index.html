@@ -292,25 +292,27 @@
             <h2>CSS Custom Properties (Variables)</h2>
             <p>These are special CSS tools that help you store colors and styles. You can reuse them many times.</p>
             <div class="code-example">
-<span style="display:block; color: #ff6b6b;">/* Light theme colors */</span>
-<span style="display:block; color: #4ecdc4;">:root</span> {
-  <span style="display:block; color: #ffe66d;">--main-color</span>: <span style="color: #a8e6cf;">#3498db</span>;
-  <span style="display:block; color: #ffe66d;">--background-color</span>: <span style="color: #a8e6cf;">#ffffff</span>;
-  <span style="display:block; color: #ffe66d;">--text-color</span>: <span style="color: #a8e6cf;">#333333</span>;
-}
+                <pre><code>
+    /* Light theme colors */
+    :root {
+    --main-color: #3498db;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    }
 
-<span style="display:block; color: #ff6b6b;">/* Dark theme colors */</span>
-<span style="display:block; color: #4ecdc4;">[data-theme="dark"]</span> {
-  <span style="display:block; color: #ffe66d;">--main-color</span>: <span style="color: #a8e6cf;">#5dade2</span>;
-  <span style="display:block; color: #ffe66d;">--background-color</span>: <span style="color: #a8e6cf;">#2c3e50</span>;
-  <span style="display:block; color: #ffe66d;">--text-color</span>: <span style="color: #a8e6cf;">#ecf0f1</span>;
-}
+    /* Dark theme colors */
+    [data-theme="dark"] {
+    --main-color: #5dade2;
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+    }
 
-<span style="display:block; color: #ff6b6b;">/* Using the colors */</span>
-<span style="display:block; color: #4ecdc4;">.button</span> {
-  <span style="display:block; color: #ffe66d;">background</span>: <span style="color: #ffb3ff;">var(--main-color)</span>;
-  <span style="display:block; color: #ffe66d;">color</span>: <span style="color: #ffb3ff;">var(--text-color)</span>;
-}
+    /* Using the colors */
+    .button {
+    background: var(--main-color);
+    color: var(--text-color);
+    }
+                </code></pre>
             </div>
         </div>
 
@@ -324,11 +326,11 @@
                 <li><strong>CSS Modules:</strong> Keep theme colors separate for each part</li>
             </ul>
             <div class="code-example">
-<span style="display:block; color: #ff6b6b;">/* HTML */</span>
-<span style="display:block; color: #4ecdc4;">&lt;body data-theme="dark"&gt;</span>
+                <span style="display:block; color: #ff6b6b;">/* HTML */</span>
+                <span style="display:block; color: #4ecdc4;">&lt;body data-theme="dark"&gt;</span>
 
-<span style="display:block; color: #ff6b6b;">/* Or with classes */</span>
-<span style="display:block; color: #4ecdc4;">&lt;body class="dark-theme"&gt;</span>
+                <span style="display:block; color: #ff6b6b;">/* Or with classes */</span>
+                <span style="display:block; color: #4ecdc4;">&lt;body class="dark-theme"&gt;</span>
             </div>
             <p style="margin-top: 30px; font-style: italic;">Pick the way that works best for your project.</p>
         </div>
